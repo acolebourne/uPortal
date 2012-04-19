@@ -30,11 +30,15 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    
+
+	<properties>
+	 	<filters.location>../../filters</filters.location>
+        <filters.file>${filters.location}/${env}.properties</filters.file>
+    </properties>    
 
     <build>
         <filters>
-            <filter>../../${filters.file}</filter>
+            <filter>${filters.file}</filter>
         </filters>
         <resources>
             <resource>

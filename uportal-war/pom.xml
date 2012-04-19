@@ -530,12 +530,14 @@
     
     <properties>
         <war-plugin-webxml-source>${project.build.directory}/pluto-resources/web.xml</war-plugin-webxml-source>
+		<filters.location>../filters</filters.location>
+        <filters.file>${filters.location}/${env}.properties</filters.file>
     </properties>
 
     <build>
         <finalName>${uportal.docbase}</finalName>
         <filters>
-            <filter>${basedir}/../${filters.file}</filter>
+            <filter>${filters.file}</filter>
         </filters>
         <resources>
             <resource>
