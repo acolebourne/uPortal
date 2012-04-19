@@ -157,6 +157,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+	
+	<properties>
+	 	<filters.location>../../filters</filters.location>
+        <filters.file>${filters.location}/${env}.properties</filters.file>
+    </properties>
 
     <build>
         <finalName>cas</finalName>
@@ -166,7 +171,7 @@
                 <configuration>
                     <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
                     <filters>
-                        <filter>${basedir}/../../${filters.file}</filter>
+                        <filter>${filters.file}</filter>
                         <filter>${basedir}/../../uportal-war/target/classes/properties/rdbm.properties</filter>
                     </filters>
 

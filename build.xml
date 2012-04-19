@@ -36,6 +36,11 @@
     </condition>
     <property name="environment.token" value="local" />
 
+	<!-- 
+	 | Set in build.properties to override
+	 +-->
+	<property name="filters.location" value="${basedir}/filters" />
+	
     <fail message="filters/${environment.token}.properties does not exist, please copy local.properties and fill in your settings.">
         <condition>
             <not>
@@ -49,7 +54,7 @@
      | by the file.
      +-->
     <property environment="env" />
-    <property file="${basedir}/filters/${environment.token}.properties" />
+	<property file="${filters.location}/${environment.token}.properties" />
     <property file="${basedir}/build.properties" />
     <property name="targetdir" value="${basedir}/target"/>
 
@@ -1386,8 +1391,8 @@ IMPORTANT: The '-Dpattern=' property is no longer a regular expression and is a 
         </condition>
         <property name="env.arg" value="-Djasig.ignore" />
 
-        <condition property="filters.arg" value="-Dfilters.file=${filters.file}">
-            <isset property="filters.file" />
+        <condition property="filters.arg" value="-Dfilters.location=${filters.location}">
+            <isset property="filters.location" />
         </condition>
         <property name="filters.arg" value="-Djasig.ignore" />
 
