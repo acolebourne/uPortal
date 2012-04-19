@@ -36,11 +36,6 @@
     </condition>
     <property name="environment.token" value="local" />
 
-	<!-- 
-	 | Set in build.properties to override
-	 +-->
-	<property name="filters.location" value="${basedir}/filters" />
-	
     <fail message="filters/${environment.token}.properties does not exist, please copy local.properties and fill in your settings.">
         <condition>
             <not>
