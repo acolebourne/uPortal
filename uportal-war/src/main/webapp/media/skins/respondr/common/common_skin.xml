@@ -91,9 +91,14 @@
     <js included="plain" resource="true">/rs/datatables/cdn/t/bs/dt-1.10.11,r-2.0.2/datatables.js</js>
     <js included="aggregated" resource="true">/rs/datatables/cdn/t/bs/dt-1.10.11,r-2.0.2/datatables.min.js</js>
 
-    <!-- Data Table ColumnFilterWidgets Includes -->  
-    <js included="both" resource="true">/rs/ColumnFilterWidgets/1.0.4/js/ColumnFilterWidgets.js</js>
-    
+    <!-- Data Table Bootstrap Includes -->
+    <js included="plain" resource="true">/rs/datatables/1.9.4/plugins/integration/bootstrap/3/dataTables.bootstrap.js</js>
+    <js included="aggregated" resource="true">/rs/datatables/1.9.4/plugins/integration/bootstrap/3/dataTables.bootstrap.js</js>
+
+    <!-- Data Table ColumnFilterWidgets Includes -->
+    <js included="plain" resource="true">/rs/datatables/1.9.4/extras/column-filter-widgets/js/ColumnFilterWidgets.js</js>
+    <js included="aggregated" resource="true">/rs/datatables/1.9.4/extras/column-filter-widgets/js/ColumnFilterWidgets.js</js>
+
     <!-- jsTree Includes (entity-selector) -->
     <js included="plain" resource="true">/scripts/jstree/jstree.js</js>
     <js included="aggregated" resource="true">/scripts/jstree/jstree.min.js</js>
